@@ -98,7 +98,7 @@ class Database {
         const objetoAtualizar = {
             ...atual,
             ...modificacoes
-        }
+        }        
         dados.splice(indice, 1)
 
         return await this.escreverArquivo([
