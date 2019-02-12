@@ -17,16 +17,6 @@ docker run \
     -d \
     adminer
 
-# ------ Comandos acima em apenas uma linha
-docker run --name postgres -e POSTGRES_USER=supersonicgabs -e POSTGRES_PASSWORD=bob@,fett -e POSTGRES_DB=heroes -p 5432:5432 -d postgres
-
-docker run --name adminer -p 8080:8080 --link postgres:postgres -d adminer    
-
-# ------ Inicializando esse docker
-docker start -i 762f7bd54729
-user: supersonicgabs
-pswd: bob@,fett
-
 ## ---- MONGODB
 docker run \
     --name mongodb \
@@ -45,8 +35,4 @@ docker run \
 
 docker exec -it mongodb \
     mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
-    --eval "db.getSiblingDB('herois').createUser({user: 'supersonicgabs', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
-
-# ------ Inicializando esse docker
-docker start -i 7f2f85a34942
-user:     
+    --eval "db.getSiblingDB('herois').createUser({user: 'supersonicgabs', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"    
