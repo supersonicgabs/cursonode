@@ -23,9 +23,14 @@ docker run --name postgres -e POSTGRES_USER=supersonicgabs -e POSTGRES_PASSWORD=
 docker run --name adminer -p 8080:8080 --link postgres:postgres -d adminer    
 
 # ------ Inicializando esse docker
+docker container start postgres
 docker start -i 762f7bd54729
+servidor: postgres
 user: supersonicgabs
 pswd: bob@,fett
+base de dados: heroes
+
+caminho: http://192.168.99.100:8080
 
 ## ---- MONGODB
 docker run \
