@@ -18,10 +18,19 @@ describe('Postgres Strategy', function(){
         const result = await context.isConnected()
         assert.equal(result, true)
     })
-    it.only('cadastrar', async function(){
+    it('cadastrar', async function(){
         const result = await context.create(MOCK_HEROI_CADASTRAR)
         delete result.id
         
+        assert.deepEqual(result, MOCK_HEROI_CADASTRAR)
+    })
+    it('listar', async function(){
+        const [result] = await context.read({nome: MOCK_HEROI_CADASTRAR.nome})
+        delete result.id
+        // pegar a primeira posicao
+        // const posicaoZero = result[0]
+        // const [posicao1, posicao2] = ['esse e o 1', 'esse e o 2']
+
         assert.deepEqual(result, MOCK_HEROI_CADASTRAR)
     })
 })
