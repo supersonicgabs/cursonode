@@ -47,6 +47,12 @@ class Postgres extends ICrud{
 
         return dataValues
     }
+    async update(id, item){
+        console.log('item: ', item);        
+        const r = await this._herois.update(item, {where: {id: id}})
+        return r
+        
+    }
     async read(item = {}){
         return this._herois.findAll({where: item, raw: true})
     }
