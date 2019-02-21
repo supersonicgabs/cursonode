@@ -27,7 +27,7 @@ docker container start postgres
 docker start -i 762f7bd54729
 servidor: postgres
 user: supersonicgabs
-pswd: bob@,fett
+pswd: (classica)
 base de dados: heroes
 
 caminho: http://192.168.99.100:8080
@@ -53,5 +53,11 @@ docker exec -it mongodb \
     --eval "db.getSiblingDB('herois').createUser({user: 'supersonicgabs', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
 
 # ------ Inicializando esse docker
+docker container start mongoclient
 docker start -i 7f2f85a34942
-user:     
+user: admin
+pswd: senhadmin
+
+docker exec -it 7f2f85a34942 /bin/bash
+
+caminho: http://192.168.99.100:3000
