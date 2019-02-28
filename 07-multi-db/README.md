@@ -55,8 +55,8 @@ docker exec -it mongodb \
 # ------ Inicializando esse docker
 docker container start mongoclient
 docker start -i 7f2f85a34942
-user: admin
-pswd: senhadmin
+user: admin supersonicgabs
+pswd: senhadmin minhasenhasecreta
 
 docker start $(docker ps -a -q --filter "status=exited")
 docker exec -it 7f2f85a34942 /bin/bash
