@@ -54,13 +54,15 @@ docker exec -it mongodb \
 
 # ------ Inicializando esse docker
 docker container start mongoclient
-docker start -i 7f2f85a34942
+docker start -i 7f2f85a34942 //segundo comando
 user: admin supersonicgabs
 pswd: senhadmin minhasenhasecreta
 
-docker start $(docker ps -a -q --filter "status=exited")
+docker start $(docker ps -a -q --filter "status=exited") //primeiro comando
 docker exec -it 7f2f85a34942 /bin/bash
 
 docker start mongodb //esse funciona
 
 caminho: http://192.168.99.100:3000
+
+docker run mongo
