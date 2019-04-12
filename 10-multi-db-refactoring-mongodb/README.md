@@ -66,5 +66,3 @@ docker start mongodb //esse funciona
 caminho: http://192.168.99.100:3000
 
 docker run mongo
-
-docker rm ${docker ps -aq}
