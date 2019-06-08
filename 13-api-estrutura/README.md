@@ -66,3 +66,8 @@ docker start mongodb //esse funciona
 caminho: http://192.168.99.100:3000
 
 docker run mongo
+
+31/05/2019
+- fazer o login no docker
+- docker start $(docker ps -a -q --filter "status=exited")
+- docker exec -it mongodb /bin/bash
