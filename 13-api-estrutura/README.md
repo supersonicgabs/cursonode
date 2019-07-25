@@ -71,3 +71,5 @@ docker run mongo
 - fazer o login no docker
 - docker start $(docker ps -a -q --filter "status=exited")
 - docker exec -it mongodb /bin/bash
+
+heroku config:set PM2_PUBLIC_KEY=pcblvpp841puwrk PM2_SECRET_KEY=90ctevg1tloqifh
