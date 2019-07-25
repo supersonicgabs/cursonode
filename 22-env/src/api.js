@@ -5,6 +5,7 @@
 //npm i dotenv
 //sudo npm i -g cross-env
 //cross-env NODE_ENV=prod npm t
+//npm i -g heroku
 const {config} = require('dotenv')
 const {join} = require('path')
 const {ok} = require('assert')
